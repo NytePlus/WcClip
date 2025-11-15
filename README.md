@@ -1,6 +1,6 @@
 <div align="center">
 
-# <span style="color: #FFD700;">WcC</span>lip: 跨设备剪贴板同步
+# ***WcC***lip: 跨设备剪贴板同步
 
 </div>
 
