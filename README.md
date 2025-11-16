@@ -6,8 +6,7 @@
 
 > [!CAUTION]
 > 凌晨两点，你正在家里用Windows电脑紧急修复线上Bug，突然发现需要用到公司macOS电脑上的密钥配置片段。
-> 
-> `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL7z+9sX8cVbR7A7qJ9mKkLpQwYtN1XhGfD8aBcE2vP7 user@host`
+### ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL7z+9sX8cVbR7A7qJ9mKkLpQwYtN1XhGfD8aBcE2vP7 user@host
 
 - 微信？—— “Windows微信已登录，Mac微信自动退出”
 - 网盘？—— 登录、上传、下载、重命名...繁琐到让人放弃
@@ -19,7 +18,7 @@
 ### 3秒解决战斗
 1. 公司电脑：`Cmd+C` 复制配置文本
 2. 家中电脑：`Ctrl+V` 粘贴使用
-
+   
 🎉**完成！** 就像在同一台电脑上操作一样自然。
 
 ---
