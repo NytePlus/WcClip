@@ -98,7 +98,7 @@ schtasks /run /tn WcClipClient
 ### Deploy on MacOS Apple-Mx
 > LaunchDaemon服务同样无法获取用户剪贴板，所以使用LaunchAgents
 
-你需要先使用文件配置你的用户服务。你需要学习编辑你的plist文件
+你需要先使用文件配置你的用户服务。首先编辑你的plist文件，样例文件可以参考[plist文件](doc/com.wcclip.client.plist)
 ```bash
 sudo vim ~/Library/LaunchAgents/<your task>.plist
 ```

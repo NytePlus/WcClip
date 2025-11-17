@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.wcclip.client</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/nyte/WcClip/wcclip-client-macos-arm64</string>
+        <string>-url</string>
+        <string>wss://wcclip-server-v1.onrender.com/ws</string>
+        <string>-token</string>
+        <string>114514</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/nyte/WcClip</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>LANG</key>
+        <string>zh_CN.UTF-8</string>
+        <key>LC_ALL</key>
+        <string>zh_CN.UTF-8</string>
+        <key>LC_CTYPE</key>
+        <string>zh_CN.UTF-8</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/nyte/WcClip/wcclip.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/nyte/WcClip/wcclip.error.log</string>
+</dict>
+</plist>
