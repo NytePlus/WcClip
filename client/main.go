@@ -1,6 +1,7 @@
 package main
 
 import (
+	"WcClip/client/connection"
 	"flag"
 	"log"
 )
@@ -23,11 +24,11 @@ func main() {
 		serverURL = url
 		log.Printf("配置url覆盖主机和端口 %s", url)
 	}
-	clientID := getClientID()
+	clientID := connection.GetClientID()
 
 	log.Printf("启动剪贴板客户端 (ID: %s)", clientID)
 	log.Printf("连接服务器: %s", serverURL)
 
-	manager := NewClipboardManager(serverURL, clientID, token)
-	manager.Start()
+	connect := connection.NewConnection(serverURL, clientID, token)
+	connect.Start()
 }

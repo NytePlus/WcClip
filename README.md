@@ -47,8 +47,11 @@ go mod tidy
 # 编译客户端（Windows）
 go build -o bin/wcclip-client.exe ./client
 
-# 编译客户端（macOS）
+# 编译客户端（macOS arm）
 $env:GOOS="darwin"; $env:GOARCH="amd64"; go build -o bin/wcclip-client-macos-amd64 ./client
+
+# 编译客户端（macOS arm）
+$env:GOOS="darwin"; $env:GOARCH="arm64"; go build -o bin/wcclip-client-macos-arm64 ./client
 
 # 编译服务端
 go build -o bin/wcclip-server ./server
@@ -79,12 +82,12 @@ wcclip-server -port 8080 -token 1234
 ### Deploy on Win64
 > windows的服务与用户交互处于不同session，vc与nssm服务无法成功获取剪贴板内容
 
-使用定时任务部署服务，在用户登录时自动启动客户端
+使用定时任务部署服务，在用户登录时自动启动客户端。配置定时任务，需要以管理员身份运行CMD
 ```cmd
 set TASK_NAME=WcClipClient
 set EXE_PATH=E:\IdeaProjects\WcClip\bin\wcclip-client.exe
-set ARG=-url wss://wcclip-server-v1.onrender.com/ws -token 114514
-schtasks /create /tn "%TASK_NAME%" /tr "%EXE_PATH% %ARG%" /sc onlogon /ru "%USERNAME%" /rl highest /it /f
+set ARG=-url wss://<ip>:<host>/ws -token <token>
+schtasks /create /tn "%TASK_NAME%" /tr "%EXE_PATH% %ARG%" /sc onlogon /ru "%USERNAME%" /rl highest /f
 
 schtasks /run /tn WcClipClient
 ```

@@ -63,7 +63,7 @@ func (se *WebsocketServer) handleWebSocket(w http.ResponseWriter, r *http.Reques
 
 		log.Printf("收到来自客户端 %s 的消息: %s\n", msg.ClientID, msg.Type)
 		if msg.Type == "text" {
-			log.Printf("剪贴板文本: %s", msg.Data)
+			log.Printf("剪贴板文本: %s", string(msg.DataString))
 		} else {
 			log.Printf("文件名: %s", msg.FileName)
 		}
